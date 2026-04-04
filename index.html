@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise 🎂</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- Start Screen -->
+  <div class="card start-screen">
+    <h2>🎉 Birthday Surprise 🎉</h2>
+    <input id="nameInput" placeholder="Enter Name 💖">
+    <button onclick="startApp()">Start</button>
+  </div>
+
+  <!-- Main App -->
+  <div class="card main hidden">
+
+    <h1 id="title"></h1>
+
+    <!-- Cake -->
+    <div class="cake">
+      <div class="candle" id="candle">
+        <div class="flame" id="flame"></div>
+      </div>
+
+      <div class="icing"></div>
+      <div class="layer layer-top"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-bottom"></div>
+    </div>
+
+    <p id="instruction">🎂 Blow the candle</p>
+
+    <button id="cutBtn" onclick="cutCake()" disabled>🔪 Cut Cake</button>
+    <button onclick="playMusic()">🎵 Music</button>
+
+    <p id="wish" class="hidden">
+      💌 Wishing you happiness, success & lots of love BATTERY isse or accha nhi bana para mai sryyyy ❤️
+    </p>
+
+  </div>
+
+</div>
+
+<canvas id="confetti"></canvas>
+<canvas id="fireworks"></canvas>
+
+<audio id="music">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

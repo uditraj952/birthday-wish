@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff4e50, #fc913a, #f9d423);
+  transition: 1s;
+  color: white;
+  text-align: center;
+}
+
+/* Night Mode */
+body.night {
+  background: radial-gradient(circle at top, #0f2027, #203a43, #000000);
+}
+
+.app {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  margin-top: 30px;
+}
+
+.hidden { display: none; }
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: white;
+  color: #ff4e50;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Highlight active button */
+button.active {
+  background: #00ffcc;
+  color: black;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Cake */
+.cake {
+  width: 200px;
+  margin: 30px auto;
+}
+
+.layer {
+  height: 45px;
+  margin: 6px 0;
+  border-radius: 12px;
+}
+
+.layer-top { background: #ffc3a0; }
+.layer-middle { background: #ff9a9e; }
+.layer-bottom { background: #ff6f61; }
+
+.icing {
+  height: 15px;
+  background: white;
+  border-radius: 10px;
+}
+
+/* Candle */
+.candle {
+  width: 10px;
+  height: 40px;
+  background: yellow;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.flame {
+  width: 12px;
+  height: 18px;
+  background: radial-gradient(circle, #fff, orange, red);
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
