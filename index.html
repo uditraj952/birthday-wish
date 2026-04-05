@@ -18,22 +18,33 @@
     <button onclick="startApp()">Start</button>
   </div>
 
-  <!-- Main App -->
+  <!-- Main -->
   <div class="card main hidden">
 
     <h1 id="title"></h1>
 
     <!-- Cake -->
-    <div class="cake">
-      <div class="candle" id="candle">
-        <div class="flame" id="flame"></div>
-      </div>
+   <div class="cake" id="cake">
 
-      <div class="icing"></div>
-      <div class="layer layer-top"></div>
-      <div class="layer layer-middle"></div>
-      <div class="layer layer-bottom"></div>
-    </div>
+  <div class="candle" id="candle">
+    <div class="flame" id="flame"></div>
+  </div>
+
+  <div class="cake-half left">
+    <div class="icing"></div>
+    <div class="layer layer-top"></div>
+    <div class="layer layer-middle"></div>
+    <div class="layer layer-bottom"></div>
+  </div>
+
+  <div class="cake-half right">
+    <div class="icing"></div>
+    <div class="layer layer-top"></div>
+    <div class="layer layer-middle"></div>
+    <div class="layer layer-bottom"></div>
+  </div>
+
+</div>
 
     <p id="instruction">🎂 Blow the candle</p>
 
@@ -41,7 +52,7 @@
     <button onclick="playMusic()">🎵 Music</button>
 
     <p id="wish" class="hidden">
-      💌 Wishing you happiness, success & lots of love BATTERY isse or accha nhi bana para mai sryyyy ❤️
+      💌 Wishing you happiness, success & lots of love ❤️
     </p>
 
   </div>
@@ -52,7 +63,7 @@
 <canvas id="fireworks"></canvas>
 
 <audio id="music">
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+  <source src="song.mpeg" type="audio/mpeg">
 </audio>
 
 <script src="script.js"></script>
