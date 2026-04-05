@@ -7,7 +7,6 @@ body {
   text-align: center;
 }
 
-/* Night Mode */
 body.night {
   background: radial-gradient(circle at top, #0f2027, #203a43, #000000);
 }
@@ -36,31 +35,35 @@ button {
   background: white;
   color: #ff4e50;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:disabled {
   opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* Highlight active button */
-button.active {
-  background: #00ffcc;
-  color: black;
-  box-shadow: 0 0 15px #00ffcc;
 }
 
 /* Cake */
+/* Cake container */
 .cake {
-  width: 200px;
-  margin: 30px auto;
+  position: relative;
+  width: 220px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0px; /* no gap */
 }
 
-.layer {
-  height: 45px;
-  margin: 6px 0;
-  border-radius: 12px;
+/* Cake halves */
+.cake-half {
+  width: 110px;
+  transition: transform 0.8s ease;
+}
+
+/* Stack layers properly */
+.cake-half .layer {
+  height: 40px;
+  margin: 5px 0;
+  border-radius: 10px;
 }
 
 .layer-top { background: #ffc3a0; }
@@ -68,28 +71,62 @@ button.active {
 .layer-bottom { background: #ff6f61; }
 
 .icing {
-  height: 15px;
+  height: 12px;
   background: white;
-  border-radius: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+/* Candle centered */
+.candle {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ✨ CUT ANIMATION */
+.cake.cut .left {
+  transform: translateX(-40px) rotate(-8deg);
+}
+
+.cake.cut .right {
+  transform: translateX(40px) rotate(8deg);
+}
+
+/* Cut animation */
+.cake.cut .left {
+  transform: translateX(-25px) rotate(-5deg);
+}
+
+.cake.cut .right {
+  transform: translateX(25px) rotate(5deg);
 }
 
 /* Candle */
 .candle {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
   width: 10px;
-  height: 40px;
-  background: yellow;
-  margin: auto;
-  position: relative;
-  cursor: pointer;
+  height: 45px;
+  background: linear-gradient(#ffeb3b, #ffc107);
+  border-radius: 5px;
 }
 
+/* Flame */
 .flame {
-  width: 12px;
-  height: 18px;
+  width: 14px;
+  height: 20px;
   background: radial-gradient(circle, #fff, orange, red);
   border-radius: 50%;
   position: absolute;
   top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
   animation: flicker 0.2s infinite alternate;
 }
 
